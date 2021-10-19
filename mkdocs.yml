@@ -1,0 +1,83 @@
+site_name: MkDocs Starter
+theme:
+  name: material
+  palette:
+    primary: teal
+  features: 
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+
+repo_url: https://github.com/boozallen/mkdocs-starter
+
+edit_uri: edit/main/docs/
+
+plugins:
+  - search: {}
+  - gen-files:
+      scripts:
+        - 'docs/add_glossary.py'
+
+extra_css:
+  - css/extra.css
+
+extra:
+  generator: false
+  social: 
+    - icon: fontawesome/brands/github
+      link: https://github.com/boozallen/mkdocs-starter
+  version:
+    provider: mike
+    default: latest
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_ID
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - footnotes
+  - attr_list
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+  - pymdownx.snippets:
+      base_path: "docs"
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# Page Tree
+nav:
+  - Home: 'index.md'
+  - Concepts:
+    - 'concepts/overview.md'
+    - Section One:
+      - 'concepts/section-one/page-one.md'
+      - 'concepts/section-one/page-two.md'
+    - Section Two:
+      - 'concepts/section-two/page-one.md'
+      - 'concepts/section-two/page-two.md'
+  - Reference:
+    - 'reference/overview.md'
+  - Tutorials:
+    - 'tutorials/overview.md'
+  - How-To Guides: 
+    - 'how-to/overview.md'
+  - Contributing:
+    - 'contributing/overview.md'
+    - 'contributing/fork-based.md'
+    - Documentation:
+      - 'contributing/docs/getting-started.md'
+      - 'contributing/docs/documentation-structure.md'
+      - 'contributing/docs/local-development.md'
+      - 'contributing/docs/markdown-lint.md'
+      - 'contributing/docs/vale.md'
+      - 'contributing/docs/add-or-remove-pages.md'
+      - 'contributing/docs/acronyms.md'
+      - 'contributing/docs/markdown-cheatsheet.md'
