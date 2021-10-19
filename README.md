@@ -29,4 +29,4 @@ Within the `docs` directory you'll find subdirectories for each of these types o
 |------------------|------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | Site Generator   | [MkDocs](https://mkdocs.org)                               | Generates the HTML site from the `docs` directory                                     |
 | Prose Linting    | [Vale](https://github.com/errata-ai/vale)                  | Enforces consistent writing style in alignment with the Microsoft Writing Style Guide |
-| Markdown Linting | [markdonwlint](https://github.com/DavidAnson/markdownlint) | Enforces consistent markdown structure and syntax                                     |
+| Markdown Linting | [markdownlint](https://github.com/DavidAnson/markdownlint) | Enforces consistent markdown structure and syntax                                     |
