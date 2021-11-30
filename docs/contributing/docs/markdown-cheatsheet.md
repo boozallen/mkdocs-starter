@@ -82,17 +82,21 @@ code blocks use three backticks and the language name for syntax highlighting:
     ```groovy
     def s = [ 1, 2, 3]
     s.each{ item ->
-      println item
+      println item // (1)
     }
     ```
+
+    1.  This is a code annotation!
     `````
 === "Rendered"
     ```groovy
     def s = [ 1, 2, 3]
     s.each{ item ->
-      println item
+      println item // (1)
     }
     ```
+
+    1.  This is a code annotation!
 
 ## Admonitions
 

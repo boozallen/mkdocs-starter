@@ -4,6 +4,7 @@ theme:
   palette:
     primary: teal
   features: 
+    - content.code.annotate
     - navigation.instant
     - navigation.tabs
     - navigation.sections
@@ -39,7 +40,8 @@ markdown_extensions:
   - abbr
   - footnotes
   - attr_list
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight
   - pymdownx.superfences
   - toc:
