@@ -4,7 +4,7 @@ A template repository for a [MkDocs](https://mkdocs.org) site with best practice
 
 ## Theme
 
-This site uses [Material for MkDOcs](squidfunk.github.io/mkdocs-material) theme. 
+This site uses [Material for MkDocs](squidfunk.github.io/mkdocs-material) theme.
 
 Run `just serve` to check it out locally. 
 
