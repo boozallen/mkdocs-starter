@@ -14,7 +14,7 @@ clean:
 ############################
 
 # builds the jte docs builder image
-docsImage := "jte-docs-builder"
+docsImage := "docs-builder"
 buildDocsImage:
   docker build docs -t {{docsImage}}
 
@@ -24,7 +24,7 @@ docs: buildDocsImage
 
 # serve the docs locally for development
 serve: buildDocsImage
-  docker run --rm -p 8000:8000 -v $(pwd):/docs {{docsImage}} serve -a 0.0.0.0:8000
+  docker run --rm -p 8000:8000 -v ~/.git-credentials:/root/.git-credentials -v $(pwd):/docs -w /docs {{docsImage}} serve -a 0.0.0.0:8000
 
 lint-docs: lint-prose lint-markdown
 
@@ -35,13 +35,6 @@ lint-prose:
 # use markdownlit to lint the docs
 lint-markdown: 
   docker run -v $(pwd):/app -w /app davidanson/markdownlint-cli2:0.3.1 "docs/**/*.md"
-
-# update current docs
-update-docs: buildDocsImage
-    #!/usr/bin/env bash
-    version=$(./gradlew -q printJTEVersion)
-    docker run --rm -v ~/.git-credentials:/root/.git-credentials -v $(pwd):/app -w /app --entrypoint=mike jte-docs-builder deploy -f --push $version
-    echo "INFO     -  Published version '$version' to GitHub Pages"
 
 ###################
 # Aggregate Tasks

@@ -1,0 +1,7 @@
+mkdocs==1.4.0
+mkdocs-material==8.5.3
+mkdocs-gen-files==0.4.0
+mkdocs-exclude==1.0.2
+mike==1.1.2
+pymdown-extensions==9.5
+mkdocs-yamp==0.1.1
